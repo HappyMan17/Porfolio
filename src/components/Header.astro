@@ -20,21 +20,22 @@ const navItems = [
   {
     title: "Contacto",
     label: "contacto",
-    url: "mailto:miduga@gmail.com",
+    url: "/#sobre-mi",
+    // url: "mailto:sebasgrisales16@gmail.com",
   },
 ]
 ---
 
 <header
-  class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2"
+  class="fixed flex justify-center top-0 z-10 w-full h-12 backdrop-blur"
 >
   <nav
-    class="flex px-3 text-sm font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center"
+    class="flex px-3 text-sm font-medium text-gray-600 dark:text-gray-200 justify-center items-center"
   >
     {
       navItems.map((link) => (
         <a
-          class="relative block px-2 py-2 transition hover:text-yellow-500 dark:hover:text-yellow-400"
+          class="relative block px-10 py-2 transition hover:text-yellow-500 dark:hover:text-yellow-400 text-sm"
           aria-label={link.label}
           href={link.url}
         >
@@ -42,6 +43,7 @@ const navItems = [
         </a>
       ))
     }
+
     <ThemeToggle />
   </nav>
 </header>
@@ -54,8 +56,10 @@ const navItems = [
     const callback = (entries: any[]) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
+          const currentSectionId = entry.target.id;
+
           navItems.forEach((item) => {
-            if (item.getAttribute("aria-label") == entry.target.id) {
+            if (item.getAttribute("aria-label") === currentSectionId) {
               item.classList.add("text-yellow-500")
             } else {
               item.classList.remove("text-yellow-500")
@@ -97,7 +101,8 @@ const navItems = [
 
   @keyframes nav-shadown {
     to {
-      @apply shadow-lg ring-1 backdrop-blur bg-gray-300/60 dark:bg-gray-800/60 ring-white/10;
+      /* @apply shadow-lg ring-1 backdrop-blur bg-gray-300/60 dark:bg-gray-800/60 ring-white/10; */
+      @apply shadow-lg backdrop-blur
     }
   }
 </style>
