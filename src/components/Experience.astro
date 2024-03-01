@@ -1,22 +1,22 @@
 ---
 import ExperienceItem from "./ExperienceItem.astro"
-const EXPERIENCIE = [
-  {
-    date: "Actualmente...",
-    title: "Creador de Contenido",
-    company: "Twitch",
-    description:
-      "Divulgo sobre programación y desarrollo web en diferentes plataformas. Galardonado como mejor creador de contenido de habla no-inglesa en 2022 y mejor comunidad en 2023 por GitHub.",
-    link: "https://twitch.tv/midudev",
-  },
-  {
-    date: "Septiembre 2022",
-    title: "Principal Frontend Engineer",
-    company: "Adevinta Spain",
-    description:
-      "Responsable de la plataforma, componentes y utilidades para la creación y desarrollo de aplicaciones web. Mejora de un 30% en la entrega de software. Implantación de medidas de integración continua y despliegue con A/B testing en más de 15 equipos.",
-  },
-]
+// const EXPERIENCIE = [
+//   {
+//     date: "Actualmente...",
+//     title: "Creador de Contenido",
+//     company: "Twitch",
+//     description:
+//       "Divulgo sobre programación y desarrollo web en diferentes plataformas. Galardonado como mejor creador de contenido de habla no-inglesa en 2022 y mejor comunidad en 2023 por GitHub.",
+//     link: "https://twitch.tv/midudev",
+//   },
+//   {
+//     date: "Septiembre 2022",
+//     title: "Principal Frontend Engineer",
+//     company: "Adevinta Spain",
+//     description:
+//       "Responsable de la plataforma, componentes y utilidades para la creación y desarrollo de aplicaciones web. Mejora de un 30% en la entrega de software. Implantación de medidas de integración continua y despliegue con A/B testing en más de 15 equipos.",
+//   },
+// ]
 ---
 <div class="relative pb-5 md:col-span-2">
   <div class="sticky top-0">
@@ -29,13 +29,13 @@ const EXPERIENCIE = [
     <time class="p-0 m-0 text-sm text-gray-600/80 dark:text-white/80"> Actualmente... </time>
   </div>
 </div>
-<div class="relative flex flex-col gap-2 pb-4 text-gray-600 dark:text-gray-300 md:col-span-3">
+<div class="relative flex flex-col gap-2 pb-1 text-gray-600 dark:text-gray-300 md:col-span-3">
   <ul style="list-style-type: disc">
-    <li>Develop a full mobile application with React Native for control and prevention of maternal mortality during birth process.</li>
-    <li>Improve application performance offline using SQLITE to manage information and synchronize it with online data base.</li>
-    <li>Contribute to develop an agile environment by implementing SCRUM framework as a SCRUM Developer helping the team to reach an increase in performance up to 45%</li>
-    <li>Improved web page usability by 45% by redesigning it and reducing API consumption when it is not necessary.</li>
-    <li>Redesign the user interface of another client application to increase the usability, leading the project to increase user satisfaction up to 35%.</li>
+    <li class="text-justify text-pretty mb-2">Desarrollo de una aplicación móvil completa con React Native para el control y prevención de la mortalidad materna durante el proceso del parto.</li>
+    <li class="text-justify text-pretty mb-2">Mejora de rendimiento de las aplicaciones sin conexión utilizando SQLITE para gestionar la información y sincronizarla con la base de datos en línea.</li>
+    <li class="text-justify text-pretty mb-2">Contribución al desarrollo de un entorno ágil implementando el marco SCRUM como desarrollador SCRUM, ayudando al equipo a alcanzar un aumento en el rendimiento de hasta un 45%</li>
+    <li class="text-justify text-pretty mb-2">Mejora de usabilidad de la página web MaternApp en un 45% al rediseñarla y reducir el consumo de API cuando no es necesario.</li>
+    <li class="text-justify text-pretty">Rediseñar la interfaz de usuario de la aplicación OvniApp para aumentar la usabilidad, lo que llevó al proyecto a aumentar la satisfacción del usuario hasta un 35%.</li>
   </ul>
 </div>
 
