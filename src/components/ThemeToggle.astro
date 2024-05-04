@@ -90,7 +90,9 @@ const THEMES = ["Light", "Dark", "System"]
       (themePreference === "system" && matchMedia.matches)
 
     updateIcon(themePreference)
-    document.documentElement.classList[isDark ? "add" : "remove"]("dark")
+    // document.documentElement.classList[isDark ? "add" : "remove"]("dark")
+    // console.log(document.documentElement)
+    document.documentElement.classList["add"]("dark")
   }
 
   updateTheme()
