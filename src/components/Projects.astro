@@ -7,6 +7,10 @@ import Express from "./icons/Express.astro"
 import Link from "./icons/Link.astro"
 import LinkButton from "./LinkButton.astro"
 import Carousel from "./Carousel.astro"
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 const TAGS = {
   NEXT: {
@@ -37,9 +41,9 @@ const TAGS = {
 }
 const PROJECTS = [
   {
-    title: "MaternApp - App para control en procesos de maternidad",
+    title: `MaternApp - ${t('projects.MaternApp.title')}`,
     description:
-      "Aplicación destinada al sector de la Salud para control del proceso de maternidad. Creada desde cero con React Native. Publicación al respecto",
+      t('projects.maternApp.description'),
     link: "https://www.semana.com/salud/articulo/asi-funciona-el-sofisticado-software-que-llega-a-colombia-para-ayudar-a-reducir-la-mortalidad-de-mujeres-durante-el-embarazo/202305/",
     image: "",
     video: "/projects/maternapp.mp4",
@@ -48,8 +52,7 @@ const PROJECTS = [
   {
     title: "Restaurant Management System",
     description:
-      `Sistema de gestión de comanditas para restaurantes. Creada desde cero con React Js, Redux, Tailwind y Express.
-      Genera resumenes de venta diarios, al igual que control general en excel, además de impresion de comandas y facturas.`,
+      t('projects.RMS.description'),
     link: "https://restaurant-front-eight.vercel.app",
     github: "",
     image: "/projects/restaurant.webp",

@@ -17,6 +17,10 @@ import ExperienceItem from "./ExperienceItem.astro"
 //       "Responsable de la plataforma, componentes y utilidades para la creación y desarrollo de aplicaciones web. Mejora de un 30% en la entrega de software. Implantación de medidas de integración continua y despliegue con A/B testing en más de 15 equipos.",
 //   },
 // ]
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 <div class="relative pb-5 md:col-span-2">
   <div class="sticky top-0">
@@ -26,16 +30,16 @@ import ExperienceItem from "./ExperienceItem.astro"
 
     <h3 class="text-xl font-bold text-yellow-400"> Main developer </h3>
     <h4 class="font-semibold text-xl text-gray-600 dark:text-white"> Innovar Web </h4>
-    <time class="p-0 m-0 text-sm text-gray-600/80 dark:text-white/80"> Mayo 2020 a Abril 2024 </time>
+    <time class="p-0 m-0 text-sm text-gray-600/80 dark:text-white/80"> {t('experience.time')} </time>
   </div>
 </div>
 <div class="relative flex flex-col gap-2 pb-1 text-gray-600 dark:text-gray-300 md:col-span-3">
   <ul style="list-style-type: disc">
-    <li class="text-justify text-pretty mb-2">Desarrollo de una aplicación móvil completa con React Native para el control y prevención de la mortalidad materna durante el proceso del parto.</li>
-    <li class="text-justify text-pretty mb-2">Mejora de rendimiento de las aplicaciones sin conexión utilizando SQLITE para gestionar la información y sincronizarla con la base de datos en línea.</li>
-    <li class="text-justify text-pretty mb-2">Contribución al desarrollo de un entorno ágil implementando el marco SCRUM como desarrollador SCRUM, ayudando al equipo a alcanzar un aumento en el rendimiento de hasta un 45%</li>
-    <li class="text-justify text-pretty mb-2">Mejora de usabilidad de la página web MaternApp en un 45% al rediseñarla y reducir el consumo de API cuando no es necesario.</li>
-    <li class="text-justify text-pretty">Rediseñar la interfaz de usuario de la aplicación OvniApp para aumentar la usabilidad, lo que llevó al proyecto a aumentar la satisfacción del usuario hasta un 35%.</li>
+    <li class="text-justify text-pretty mb-2">{t('experience.li1')}</li>
+    <li class="text-justify text-pretty mb-2">{t('experience.li2')}</li>
+    <li class="text-justify text-pretty mb-2">{t('experience.li3')}</li>
+    <li class="text-justify text-pretty mb-2">{t('experience.li4')}</li>
+    <li class="text-justify text-pretty">{t('experience.li5')}</li>
   </ul>
 </div>
 

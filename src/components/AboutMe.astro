@@ -1,5 +1,9 @@
 ---
  const personalImageAlt = "Sebastian Grisales"
+ import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <article class="flex flex-col items-center justify-center gap-8 text-gray-700 dark:text-gray-300 md:flex-row mb-10">
@@ -7,14 +11,12 @@
     class="[&>p]:mb-4 [&>p>strong]:text-yellow-500 dark:[&>p>strong]:text-yellow-100 [&>p>strong]:font-normal [&>p>strong]:font-mono text-pretty order-2 md:order-1"
   >
     <p>
-      Soy Sebastian Grisales, empecé en la programación como un hobby,
-      el cual he formalizado en la Universidad del Valle. Entre mis experiencias más significativas,
-      se encuentra mi rol como lider del equipo de la Start Up para el desarrollo de la aplicación <strong>MaternApp</strong>.
+      {t('aboutme.description')} <strong> {t('aboutMe.maternApp')} </strong>
     </p>
 
     <p>
-      Como Fun fact soy profesional en comercio exterior, pero mi pasión por la programación me llevó a cambiar de rumbo. <strong
-        > Me encanta la programación y aprender constantemente sobre la misma</strong>.
+      {t('aboutMe.funFact')}
+      <strong> {t('aboutMe.strong')} </strong>
     </p>
   </div>
 

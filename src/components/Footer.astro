@@ -1,5 +1,9 @@
 ---
 const currentYear = new Date().getFullYear()
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <footer
@@ -9,16 +13,16 @@ const currentYear = new Date().getFullYear()
     class="rounded-lg w-full max-w-screen-xl mx-auto md:flex md:items-center md:justify-between py-4 px-4 md:px-0"
   >
     <span class="text-sm sm:text-center text-zinc-800/90 dark:text-zinc-200/90"
-      > @ Diseñado por @midudev
+      > @ {t('footer.designed')} @midudev
     </span>
     <ul
       class="flex flex-wrap items-center mt-3 text-sm font-medium dark:text-white/90 sm:mt-0"
     >
       <li>
-        <a href="/#sobre-mi" class="hover:underline me-4 md:me-6">Sobre mí</a>
+        <a href="/#sobre-mi" class="hover:underline me-4 md:me-6">{t('footer.aboutMe')}</a>
       </li>
       <li>
-        <a id="contacto" href="mailto:miduga@gmail.com" class="hover:underline">Contacto</a>
+        <a id="contacto" href="mailto:miduga@gmail.com" class="hover:underline">{t('footer.contact')}</a>
       </li>
     </ul>
   </div>
